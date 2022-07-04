@@ -192,35 +192,40 @@ const App = () => {
     <div className="mainContainer">
       <div className="dataContainer">
         <div className="header">
-          <span role="img" aria-label="hand-wave">
-            👋
-          </span>{" "}
-          WELCOME!
+          <font color ="#E3C1BB">
+          LETTER
+          </font>
         </div>
         <div className="bio">
-          イーサリアムウォレットを接続して、メッセージを作成したら、
-          <span role="img" aria-label="hand-wave">
-            👋
-          </span>
+          <font color ="#E3C1BB">
+          イーサリアムウォレットを接続してメッセージ
+          </font>
+          <font color ="#E3C1BB">
           を送ってください
-          <span role="img" aria-label="shine">
-            ✨
-          </span>
+          </font>
         </div>
         <br />
         {/* ウォレットコネクトのボタンを実装 */}
         {!currentAccount && (
           <button className="waveButton" onClick={connectWallet}>
+            <font color = "white">
             Connect Wallet
+            </font>
           </button>
         )}
         {currentAccount && (
-          <button className="waveButton">Wallet Connected</button>
+          <button className="waveButton">
+              <font color = "white">
+              Connect Wallet
+              </font>
+            </button>
         )}
         {/* waveボタンにwave関数を連動 */}
         {currentAccount && (
           <button className="waveButton" onClick={wave}>
-            Wave at Me
+            <font color ="white">
+            Send a message
+            </font>
           </button>
         )}
         {/* メッセージボックスを実装*/}
@@ -244,14 +249,26 @@ const App = () => {
                 <div
                   key={index}
                   style={{
-                    backgroundColor: "#F8F8FF",
+                    backgroundColor: "#E6D2C9",
                     marginTop: "16px",
                     padding: "8px",
                   }}
                 >
-                  <div>Address: {wave.address}</div>
-                  <div>Time: {wave.timestamp.toString()}</div>
-                  <div>Message: {wave.message}</div>
+                  <div>
+                    <font color ="white">
+                    Address: {wave.address}
+                    </font>
+                    </div>
+                  <div>
+                    <font color ="white">
+                    Time: {wave.timestamp.toString()}
+                    </font>
+                    </div>
+                  <div>
+                    <font color ="white">
+                    Message: {wave.message}
+                    </font>
+                    </div>
                 </div>
               );
             })}
